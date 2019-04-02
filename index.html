@@ -36,43 +36,6 @@
         <input type="text" placeholder="Search..">
     </div>
     <div id="map" style="width:100%;height:400px;"></div>
-    <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-            <!--instead of forlooop we will have have a section where users will submit information to the fire base
-                    -->
-            <img class="activator" src="./assets/images/gifts.jpg">
-        </div>
-        <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title<i
-                    class="material-icons right">more_vert</i></span>
-            <p><a href="#">This is a link</a></p>
-        </div>
-        <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-        </div>
-    </div>
-
-    <ul id="product_showcase">
-
-    </ul>
-
-    <script>
-    var token = '12174644384.1677ed0.da08bf3bc3854d42b2bfe597d4f3c94f',
-            num_photos = 10,
-            container = document.getElementById('product_showcase'),
-            scrElement = document.createElement('script');
-
-        window.productResult = function (data) {
-            for (x in data.data) {
-                container.innerHTML += '<li><img src="' + data.data[x].images.low_resolution.url + '"></li>';
-            }
-        }
-
-        scrElement.setAttribute('src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=productResult');
-        document.body.appendChild(scrElement);
-    </script>
-
     <script>
         // Note: This example requires that you consent to location sharing when
         // prompted by your browser. If you see the error "The Geolocation service
@@ -112,40 +75,6 @@
             infoWindow.open(map);
         }
     </script>
-<<<<<<< HEAD
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcxIi0o6nvdD7ljx2v2OAAP9hOCYY1_20&callback=initMap">
-        </script>
-    <div id="container">
-        <div class="image-container">
-            <img class="pic" src="./assets/images/gifts.jpg"> </img>
-            <p> Safe Grabs</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/Safe-Grab.jpg"> </img>
-            <p> Gifts</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/scrubdaddy.jpg"> </img>
-            <p> Scrub Daddy</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/toys.jpg"> </img>
-            <p> Toys </p>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
-=======
->>>>>>> 471d12286dffa970d42025648b4a3270ab1d7136
     <!--Submit -->
     <div class="jumbotron" style="background-color: #c55656; color: white">
         <h1 class="text-center">Add item</h1>
@@ -182,23 +111,22 @@
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcxIi0o6nvdD7ljx2v2OAAP9hOCYY1_20&callback=initMap">
     </script>
-<div id="container">
-    <div class="image-container">
-        <img class="pic" src="./assets/images/gifts.jpg"> </img>
-        <p> Safe Grabs</p>
+<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+        <!--instead of forlooop we will have have a section where users will submit information to the fire base
+                -->
+        <img class="activator" src="./assets/images/gifts.jpg">
     </div>
-    <div class="image-container">
-        <img class="pic" src="./assets/images/Safe-Grab.jpg"> </img>
-        <p> Gifts</p>
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Card Title<i
+                class="material-icons right">more_vert</i></span>
+        <p><a href="#">This is a link</a></p>
     </div>
-    <div class="image-container">
-        <img class="pic" src="./assets/images/scrubdaddy.jpg"> </img>
-        <p> Scrub Daddy</p>
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
-    <div class="image-container">
-        <img class="pic" src="./assets/images/toys.jpg"> </img>
-        <p> Toys </p>
-    </div>
+</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
