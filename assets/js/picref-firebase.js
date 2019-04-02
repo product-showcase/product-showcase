@@ -9,6 +9,12 @@ var config = {
 firebase.initializeApp(config);
 console.log(firebase);
 
+// add database below//
+
+
+
+
+// practice below
 
 var database = firebase.database();
 
