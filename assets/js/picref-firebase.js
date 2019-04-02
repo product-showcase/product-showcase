@@ -10,8 +10,8 @@ firebase.initializeApp(config);
 console.log(firebase);
 
 // add database below//
-// 2. Button for adding Employees
-$("#add-item-btn").on("click", function (event) {
+// 2. Button for adding items
+$("#add-item").on("click", function (event) {
     event.preventDefault();
 
     // Grabs user input
@@ -20,7 +20,7 @@ $("#add-item-btn").on("click", function (event) {
     var itemWebLink = $("#website-link").val().trim();
     var itemImage = $("#item-image").val().trim();
 
-    // Creates local "temporary" object for holding employee data
+    // Creates local "temporary" object for holding item data
     var newItem = {
         name: itemName,
         desc: itemDesc,
@@ -28,8 +28,8 @@ $("#add-item-btn").on("click", function (event) {
         image: itemImage
     };
 
-    // Uploads employee data to the database
-    database.ref('posts').push(newItem);
+    // Uploads item data to the database
+    database.ref().push(newItem);
 
     // Logs everything to console
     console.log(newItem.itemName);
@@ -46,7 +46,7 @@ $("#add-item-btn").on("click", function (event) {
     $("#item-image").val("");
 });
 
-// 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
+// 3. Create Firebase event for adding item to the database and a row in the html when a user adds an entry
 database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
 
@@ -56,32 +56,13 @@ database.ref().on("child_added", function (childSnapshot) {
     var itemWebLink = childSnapshot.val().webLink;
     var itemImage = childSnapshot.val().image;
 
-    // Employee Info
+    // Item Info
     console.log(itemName);
     console.log(itemDesc);
     console.log(itemWebLink);
     console.log(itemImage);
 
-    // Prettify the employee start
-
-
-    // Calculate the months worked using hardcore math
-    // To calculate the months worked
-
-
-    // Calculate the total billed rate
-
-
-    // Create the new row
-
-
-    // Append the new row to the table
-
 });
-
-
-
-// practice below
 
 var database = firebase.database();
 
