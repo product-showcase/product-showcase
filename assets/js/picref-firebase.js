@@ -61,7 +61,7 @@ database.ref().on("child_added", function (childSnapshot) {
     console.log(itemDesc);
     console.log(itemWebLink);
     console.log(itemImage);
-    
+
 });
 
 var database = firebase.database();
