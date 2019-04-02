@@ -56,12 +56,24 @@ database.ref().on("child_added", function (childSnapshot) {
     var itemWebLink = childSnapshot.val().webLink;
     var itemImage = childSnapshot.val().image;
 
+<<<<<<< HEAD
     // Item Info
     console.log(itemName);
     console.log(itemDesc);
     console.log(itemWebLink);
     console.log(itemImage);
 
+=======
+    var newDiv = $("<div class='card'>");
+    var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
+    var newImage = $("<img class='activator' src='./assets/images/toys.jpg'");
+    var newCardContent = $("<div class='card-content'");
+    var newTitle = $("<span class='card-title activator grey-text text-darken-4'");
+    var newPLink = $("<p><a href='#'");
+    var newReveal = $("<div class='card-reveal'");
+    var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'");
+    
+>>>>>>> 885c71a199a8bacc1454c4ba4bd33b5bf076c8b7
 });
 
 var database = firebase.database();
