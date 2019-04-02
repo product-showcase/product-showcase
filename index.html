@@ -50,6 +50,27 @@
             <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
     </div>
+
+    <ul id="product_showcase">
+
+    </ul>
+
+    <script>
+    var token = '12174644384.1677ed0.da08bf3bc3854d42b2bfe597d4f3c94f',
+            num_photos = 10,
+            container = document.getElementById('product_showcase'),
+            scrElement = document.createElement('script');
+
+        window.productResult = function (data) {
+            for (x in data.data) {
+                container.innerHTML += '<li><img src="' + data.data[x].images.low_resolution.url + '"></li>';
+            }
+        }
+
+        scrElement.setAttribute('src', 'https://api.instagram.com/v1/users/self/media/recent?access_token=' + token + '&count=' + num_photos + '&callback=productResult');
+        document.body.appendChild(scrElement);
+    </script>
+
     <script>
         // Note: This example requires that you consent to location sharing when
         // prompted by your browser. If you see the error "The Geolocation service
@@ -117,6 +138,9 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
     <!--Submit -->
     <div class="jumbotron" style="background-color: #c55656; color: white">
         <h1 class="text-center">Add item</h1>
