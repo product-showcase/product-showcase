@@ -7,7 +7,7 @@ var config = {
     messagingSenderId: "36009876719"
 };
 firebase.initializeApp(config);
-console.log(firebase);
+var database = firebase.database();
 
 // add database below//
 // 2. Button for adding items
