@@ -11,6 +11,9 @@ console.log(firebase);
 
 
 var database = firebase.database();
+
+
+
 var ref = database.ref('pic-num');
 
 var data = {
