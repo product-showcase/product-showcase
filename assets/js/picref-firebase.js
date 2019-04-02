@@ -15,35 +15,35 @@ $("#add-employee-btn").on("click", function (event) {
     event.preventDefault();
 
     // Grabs user input
-    var empName = $("#employee-name-input").val().trim();
-    var empRole = $("#role-input").val().trim();
-    var empStart = moment($("#start-input").val().trim(), "MM/DD/YYYY").format("X");
-    var empRate = $("#rate-input").val().trim();
+    var itemName = $("#item-name").val().trim();
+    var itemDesc = $("#description").val().trim();
+    var itemWebLink = $("#website-link").val().trim();
+    var itemImage = $("#item-image").val().trim();
 
     // Creates local "temporary" object for holding employee data
-    var newEmp = {
-        name: empName,
-        role: empRole,
-        start: empStart,
-        rate: empRate
+    var newItem = {
+        name: itemName,
+        desc: itemDesc,
+        webLink: itemWebLink,
+        image: itemImage
     };
 
     // Uploads employee data to the database
-    database.ref().push(newEmp);
+    database.ref().push(newItem);
 
     // Logs everything to console
-    console.log(newEmp.name);
-    console.log(newEmp.role);
-    console.log(newEmp.start);
-    console.log(newEmp.rate);
+    console.log(newItem.itemName);
+    console.log(newItem.itemDesc);
+    console.log(newItem.itemWebLink);
+    console.log(newItem.itemImage);
 
-    alert("Employee successfully added");
+    alert("Item successfully added");
 
     // Clears all of the text-boxes
-    $("#employee-name-input").val("");
-    $("#role-input").val("");
-    $("#start-input").val("");
-    $("#rate-input").val("");
+    $("#item-name").val("");
+    $("#description").val("");
+    $("#website-link").val("");
+    $("#item-image").val("");
 });
 
 // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
@@ -51,41 +51,32 @@ database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
 
     // Store everything into a variable.
-    var empName = childSnapshot.val().name;
-    var empRole = childSnapshot.val().role;
-    var empStart = childSnapshot.val().start;
-    var empRate = childSnapshot.val().rate;
+    var itemName = childSnapshot.val().name;
+    var itemDesc = childSnapshot.val().desc;
+    var itemWebLink = childSnapshot.val().webLink;
+    var itemImage = childSnapshot.val().image;
 
     // Employee Info
-    console.log(empName);
-    console.log(empRole);
-    console.log(empStart);
-    console.log(empRate);
+    console.log(itemName);
+    console.log(itemDesc);
+    console.log(itemWebLink);
+    console.log(itemImage);
 
     // Prettify the employee start
-    var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
+    
 
     // Calculate the months worked using hardcore math
     // To calculate the months worked
-    var empMonths = moment().diff(moment(empStart, "X"), "months");
-    console.log(empMonths);
+
 
     // Calculate the total billed rate
-    var empBilled = empMonths * empRate;
-    console.log(empBilled);
+
 
     // Create the new row
-    var newRow = $("<tr>").append(
-        $("<td>").text(empName),
-        $("<td>").text(empRole),
-        $("<td>").text(empStartPretty),
-        $("<td>").text(empMonths),
-        $("<td>").text(empRate),
-        $("<td>").text(empBilled)
-    );
+
 
     // Append the new row to the table
-    $("#employee-table > tbody").append(newRow);
+    
 });
 
 
@@ -104,5 +95,3 @@ var data = {
 }
 
 ref.push(data);
-
-//afeawefawfewaf
