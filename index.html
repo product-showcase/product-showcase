@@ -91,66 +91,14 @@
             infoWindow.open(map);
         }
     </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcxIi0o6nvdD7ljx2v2OAAP9hOCYY1_20&callback=initMap">
-        </script>
-    <div id="container">
-        <div class="image-container">
-            <img class="pic" src="./assets/images/gifts.jpg"> </img>
-            <p> Safe Grabs</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/Safe-Grab.jpg"> </img>
-            <p> Gifts</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/scrubdaddy.jpg"> </img>
-            <p> Scrub Daddy</p>
-        </div>
-        <div class="image-container">
-            <img class="pic" src="./assets/images/toys.jpg"> </img>
-            <p> Toys </p>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!--Submit -->
-    <div class="jumbotron" style="background-color: pink; color: white">
-        <h1 class="text-center">Company Input Data Management</h1>
-        <h3 class="text-center">Comphrensive information</h3>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <!--  Business-->
-            <div class="card mb-4">
-                <div class="card-header">Company Name</div>
-                <div class="card-body">
-                    <table class="table table-sm table-hover" id='employee-table'>
-                        <thead>
-                            <tr>
-                                <th scope="col">Name</th>
-                                <th scope="col">Type of Business</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+    <div class="jumbotron" style="background-color: #c55656; color: white">
+        <h1 class="text-center">Add item</h1>
     </div>
     <div class="row">
         <div class="col-md-12">
             <!-- Add Employee  -->
             <div class="card mb-4">
-                <div class="card-header">Add Item</div>
                 <div class="card-body">
                     <!-- Entry Form -->
                     <form>
@@ -166,10 +114,43 @@
                             <label for="start-input">Website Link</label>
                             <input class="form-control" id="website-link" placeholder="www.amazon.com" type="text">
                         </div>
+                        <div class="form-group">
+                            <label for="start-input">Image</label>
+                            <input class="form-control" id="pic-image" type="text">
+                        </div>
                         <button class="btn btn-primary float-right" id="add-employee-btn">Submit</button>
                     </form>
                 </div>
             </div>
 </body>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcxIi0o6nvdD7ljx2v2OAAP9hOCYY1_20&callback=initMap">
+    </script>
+<div id="container">
+    <div class="image-container">
+        <img class="pic" src="./assets/images/gifts.jpg"> </img>
+        <p> Safe Grabs</p>
+    </div>
+    <div class="image-container">
+        <img class="pic" src="./assets/images/Safe-Grab.jpg"> </img>
+        <p> Gifts</p>
+    </div>
+    <div class="image-container">
+        <img class="pic" src="./assets/images/scrubdaddy.jpg"> </img>
+        <p> Scrub Daddy</p>
+    </div>
+    <div class="image-container">
+        <img class="pic" src="./assets/images/toys.jpg"> </img>
+        <p> Toys </p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </html>
