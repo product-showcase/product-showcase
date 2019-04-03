@@ -3,6 +3,23 @@
   background-color: #c55656;
 }
 
+.Aboutus {
+  font-family: serif;
+  font-style: Times;
+  font-size: 25px;
+}
+
+.Directory{
+  font-family: 'Courier New', Courier, monospace;
+  font-display: ;
+  font-size: 18px;
+  margin-bottom: 100px;
+  margin-top: 300px;
+  margin-right: 30px;
+  margin-left: 60px;
+
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
