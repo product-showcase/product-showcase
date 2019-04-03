@@ -93,7 +93,24 @@
   background-color: red;
 }
 
+<<<<<<< HEAD
 .link{
   position: absolute;
   left: 20px;
 }
+=======
+  .delete-item{
+    background-color: #b32501;
+    position: absolute;
+    right: 20px;
+  }
+
+  .delete-item:hover{
+    background-color: red;
+  }
+
+  .link{
+    position: absolute;
+    left: 20px;
+  }
+>>>>>>> f82365bfe80e8539bbc32b587f4cf3a0681249a2

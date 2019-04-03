@@ -9,35 +9,6 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-
-function writeUserData(userId, name, email, imageUrl) {
-    firebase.database().ref('users/' + userId).set({
-        username: name,
-        email: email,
-        profile_picture: imageUrl
-    });
-    function writeNewPost(uid, username, picture, title, body) {
-        // A post entry.
-        var postData = {
-            author: username,
-            uid: uid,
-            body: body,
-            title: title,
-            starCount: 0,
-            authorPic: picture
-        };
-
-        // Get a key for a new Post.
-        var newPostKey = firebase.database().ref().child('posts').push().key;
-
-        // Write the new post's data simultaneously in the posts list and the user's post list.
-        var updates = {};
-        updates['/posts/' + newPostKey] = postData;
-        updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-
-        return firebase.database().ref().update(updates);
-    }
-}
 // add database below//
 // 2. Button for adding items
 $("#add-item").on("click", function (event) {
@@ -102,9 +73,17 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     newReveal.append(newCardTitle2, newPTag);
     $('#cards').append(newDiv);
 
+    deleteItem.on("click", function (event) {
+        event.preventDefault();
+    
+        database.ref('posts/'+itemName).remove();
+    })
 });
+<<<<<<< HEAD
 
 $(".delete-item").on("click", function (event) {
     event.preventDefault();
     console.log("delete");
 })
+=======
+>>>>>>> f82365bfe80e8539bbc32b587f4cf3a0681249a2
