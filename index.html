@@ -18,6 +18,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <!--CSS Ref-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
@@ -26,8 +27,76 @@
 </head>
 
 <body>
+
+    <section id="title" class="section-color">
+        <div class="container-fluid">
+            <!-- Nav Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <!-- brand -->
+                <a class="navbar-brand" href="index.html"><img src="assets/images/money.svg"
+                        class="d-inline-block align-top logo" alt="Project Showcase"></a>
+                <h1>Product Showcase</h1>
+                <!-- responsive button for small viewports; allows collapsing of navbar content on the right-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#clickToggles"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- stuff that collapses when the button appears -->
+                <div class="collapse navbar-collapse" id="clickToggles">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">News</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+    
+    
+    
+            <!-- Title -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="title-description">Product Showcase (PS) is a website where community members post
+                        interesting products.</h2>
+                    <!-- <button type="button" class="btn btn-dark btn-lg download-app"><i class="fab fa-apple"></i>
+                            PS Download</button>
+                        <button type="button" class="btn btn-outline-light btn-lg download-app"><i
+                                class="fab fa-google-play"></i> PS Download</button> -->
+                </div>
+                <!--
+                        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                    -->
+                <div class="col-lg-3 col-sm-6">
+    
+                    <img class="product-image" src="assets/images/money.svg" alt="Product Showcase">
+                </div>
+                <div class="col-lg-3 col-sm-6">
+    
+                    <img class="product-image" src="assets/images/money.svg" alt="Product Showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <br />
+
+
+
+
+
+
+
+
+
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
+    <!-- <nav class="navbar navbar-light bg-light">
         <a id="titlename" class="navbar-brand" href="#">
             <img src="assets/images/3d-printing-software.svg" width="30" height="30" class="d-inline-block align-top"
                 alt="Project Showcase">
@@ -38,7 +107,7 @@
         <a class="active" href="#home">Home</a>
         <a class="nav-link" href="about.html">About</a>
         <a href="product.html">Product News</a>
-    </div>
+    </div> -->
     <div id="map" style="width:100%;height:300px;"></div>
     <div id="cards"></div>
     <script>
