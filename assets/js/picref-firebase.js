@@ -60,12 +60,6 @@ $("#add-item").on("click", function (event) {
     // Uploads item data to the database
     database.ref('posts').push(newItem);
 
-    // Logs everything to console
-    console.log(newItem.itemName);
-    console.log(newItem.itemDesc);
-    console.log(newItem.itemWebLink);
-    console.log(newItem.itemImage);
-
     alert("Item successfully added");
 
     // Clears all of the text-boxes
@@ -75,11 +69,8 @@ $("#add-item").on("click", function (event) {
     $("#item-image").val("");
 });
 
-
-
 // 3. Create Firebase event for adding item to the database and a row in the html when a user adds an entry
 database.ref('posts').on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
 
     // Store everything into a variable.
     var itemName = childSnapshot.val().name;
@@ -95,15 +86,17 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     var newCardContent = $("<div class='card-content'>");
     var newTitle = $('<span class="card-title activator grey-text text-darken-4">' + itemName + '<i class="material-icons right">more_vert</i></span>');
 
-    var newLink = $("<a href='http://" + itemWebLink + "'>");
+    var newLink = $("<a class='link' href='http://" + itemWebLink + "'>");
     newLink.text(itemWebLink);
 
     var newReveal = $("<div class='card-reveal'>");
     var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'>" + itemName + "<i class='material-icons right'>close</i></span>");
     var newPTag = $("<p>");
     newPTag.text(itemDesc);
-    var deleteButton = $("<a id='delete-button' class='waves-effect waves-light btn-small'>Delete</a>");
-    newDiv.append(newDivCard, newCardContent, newLink, deleteButton, newReveal);
+    
+    var deleteItem = $("<a class='waves-effect waves-light btn-small delete-item'>Delete</a>");
+    
+    newDiv.append(newDivCard, newCardContent, newLink, deleteItem, newReveal);
     newDivCard.append(newImage);
     newCardContent.append(newTitle);
     newReveal.append(newCardTitle2, newPTag);
@@ -111,6 +104,7 @@ database.ref('posts').on("child_added", function (childSnapshot) {
 
 });
 
-$("#delete-button").click(function(){
-    alert("hello");
+$(".delete-item").on("click", function(event){
+    event.preventDefault();
+    console.log("delete");
 })

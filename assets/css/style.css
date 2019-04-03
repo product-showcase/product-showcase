@@ -66,8 +66,17 @@
     height: 300px;
   }
 
-  #delete-button{
-    background-color: red;
+  .delete-item{
+    background-color: #b32501;
     position: absolute;
     right: 20px;
+  }
+
+  .delete-item:hover{
+    background-color: red;
+  }
+
+  .link{
+    position: absolute;
+    left: 20px;
   }
