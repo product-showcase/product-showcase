@@ -56,6 +56,7 @@ database.ref().on("child_added", function (childSnapshot) {
     var itemWebLink = childSnapshot.val().webLink;
     var itemImage = childSnapshot.val().image;
 
+<<<<<<< HEAD
     var newDiv = $("<div class='card'>");
     var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
     var newImage = $("<img class='activator' src='./assets/images/toys.jpg'");
@@ -65,6 +66,14 @@ database.ref().on("child_added", function (childSnapshot) {
     var newReveal = $("<div class='card-reveal'");
     var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'");
     
+=======
+    // Item Info
+    console.log(itemName);
+    console.log(itemDesc);
+    console.log(itemWebLink);
+    console.log(itemImage);
+
+>>>>>>> 39cd804c8c2f7d1a682b0de74decaf37eda0489a
 });
 
 var database = firebase.database();
