@@ -100,18 +100,6 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     // </div>
 
     var newDiv = $("<div class='card'>");
-<<<<<<< HEAD
-    var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
-    var newImage = $("<img class='activator' src='./assets/images/toys.jpg'");
-    var newCardContent = $("<div class='card-content'");
-    var newTitle = $("<span class='card-title activator grey-text text-darken-4'");
-    var newPLink = $("<p><a href='#'");
-    var newReveal = $("<div class='card-reveal'");
-    var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'");
-    
-});
-=======
->>>>>>> 2f80f2dfaa8fbe361c033063fd98594a2993b3d9
 
     var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
     var newImage = $("<img class='activator' src='" + itemImage + "'>");
