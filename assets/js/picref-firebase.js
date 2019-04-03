@@ -75,7 +75,7 @@ database.ref('posts').on("child_added", function (childSnapshot) {
 
     deleteItem.on("click", function (event) {
         event.preventDefault();
-    
-        database.ref('posts/'+itemName).remove();
+
+        database.ref('posts/' + itemName).remove();
     })
 });
