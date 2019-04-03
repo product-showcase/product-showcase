@@ -99,29 +99,7 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     //     </div>
     // </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Item Info
-    console.log(itemName);
-    console.log(itemDesc);
-    console.log(itemWebLink);
-    console.log(itemImage);
-
-=======
     var newDiv = $("<div class='card'>");
-    var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
-    var newImage = $("<img class='activator' src='./assets/images/toys.jpg'");
-    var newCardContent = $("<div class='card-content'");
-    var newTitle = $("<span class='card-title activator grey-text text-darken-4'");
-    var newPLink = $("<p><a href='#'");
-    var newReveal = $("<div class='card-reveal'");
-    var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'");
-    
->>>>>>> 885c71a199a8bacc1454c4ba4bd33b5bf076c8b7
-});
-=======
-    var newDiv = $("<div class='card'>");
->>>>>>> 4252aa08de5c173dccd0c1d22e2b904ca3d7d013
 
     var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
     var newImage = $("<img class='activator' src='" + itemImage + "'>");
@@ -143,4 +121,3 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     $('#cards').append(newDiv);
 
 });
-
