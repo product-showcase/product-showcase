@@ -106,6 +106,7 @@ database.ref('posts').on("child_added", function (childSnapshot) {
 
     var newCardContent = $("<div class='card-content'>");
     var newTitle = $('<span class="card-title activator grey-text text-darken-4">' + itemName + '<i class="material-icons right">more_vert</i></span>');
+
     var newPLink = $("<a href='" + itemWebLink + "'>");
     newPLink.text('Website');
 
@@ -121,4 +122,3 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     $('#cards').append(newDiv);
 
 });
-
