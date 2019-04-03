@@ -75,6 +75,8 @@ $("#add-item").on("click", function (event) {
     $("#item-image").val("");
 });
 
+
+
 // 3. Create Firebase event for adding item to the database and a row in the html when a user adds an entry
 database.ref('posts').on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
@@ -98,13 +100,17 @@ database.ref('posts').on("child_added", function (childSnapshot) {
 
     var newReveal = $("<div class='card-reveal'>");
     var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'>" + itemName + "<i class='material-icons right'>close</i></span>");
-    var newPTag = $("<p>")
+    var newPTag = $("<p>");
     newPTag.text(itemDesc);
-
-    newDiv.append(newDivCard, newCardContent, newLink, newReveal);
+    var deleteButton = $("<a id='delete-button' class='waves-effect waves-light btn-small'>Delete</a>");
+    newDiv.append(newDivCard, newCardContent, newLink, deleteButton, newReveal);
     newDivCard.append(newImage);
     newCardContent.append(newTitle);
     newReveal.append(newCardTitle2, newPTag);
     $('#cards').append(newDiv);
 
 });
+
+$("#delete-button").click(function(){
+    alert("hello");
+})
