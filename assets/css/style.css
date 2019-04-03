@@ -49,6 +49,8 @@
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+
+    
   }
 
   .card{
@@ -62,4 +64,19 @@
   .card-pic{
     max-height: 100%;
     height: 300px;
+  }
+
+  .delete-item{
+    background-color: #b32501;
+    position: absolute;
+    right: 20px;
+  }
+
+  .delete-item:hover{
+    background-color: red;
+  }
+
+  .link{
+    position: absolute;
+    left: 20px;
   }
