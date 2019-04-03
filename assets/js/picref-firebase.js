@@ -84,38 +84,24 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     var itemDesc = childSnapshot.val().desc;
     var itemWebLink = childSnapshot.val().webLink;
     var itemImage = childSnapshot.val().image;
-    // <div class="card">
-    //     <div class="card-image waves-effect waves-block waves-light">
-    //         <img class="activator" src="./assets/images/gifts.jpg">
-    //     </div>
-    //     <div class="card-content">
-    //         <span class="card-title activator grey-text text-darken-4">Card Title<i
-    //                 class="material-icons right">more_vert</i></span>
-    //         <p><a href="#">This is a link</a></p>
-    //     </div>
-    //     <div class="card-reveal">
-    //         <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-    //         <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    //     </div>
-    // </div>
 
     var newDiv = $("<div class='card'>");
 
     var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
-    var newImage = $("<img class='activator' src='" + itemImage + "'>");
+    var newImage = $("<img class='activator card-pic' src='" + itemImage + "'>");
 
     var newCardContent = $("<div class='card-content'>");
     var newTitle = $('<span class="card-title activator grey-text text-darken-4">' + itemName + '<i class="material-icons right">more_vert</i></span>');
 
-    var newPLink = $("<a href='" + itemWebLink + "'>");
-    newPLink.text('Website');
+    var newLink = $("<a href='http://" + itemWebLink + "'>");
+    newLink.text(itemWebLink);
 
     var newReveal = $("<div class='card-reveal'>");
     var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'>" + itemName + "<i class='material-icons right'>close</i></span>");
     var newPTag = $("<p>")
     newPTag.text(itemDesc);
 
-    newDiv.append(newDivCard, newCardContent, newPLink, newReveal);
+    newDiv.append(newDivCard, newCardContent, newLink, newReveal);
     newDivCard.append(newImage);
     newCardContent.append(newTitle);
     newReveal.append(newCardTitle2, newPTag);
