@@ -1,5 +1,5 @@
 let news = [];
-let page = 10;
+let page = 5;
 
 async function fetchNews() {
   let url =
@@ -17,7 +17,7 @@ function render() {
   document.getElementById("news-stories").innerHTML = news.map(
     article => `
         <div class="news-story d-flex border border-success rounded p-5 m-2">
-        <div class="news-content col-6">
+        <div class="news-content col-8">
           <h2>${article.title}</h2>
           <p>${article.source.name}</p>
           <p>${moment(article.publishedAt)
@@ -26,7 +26,7 @@ function render() {
           <p>${article.description}</p>
           <p><a href="${article.url}">Read More</a></p>
         </div>
-        <div class="news-imgage col-3">
+        <div class="news-imgage col-4">
           <img class='img-thumbnail'
             src="${article.urlToImage}"
           />
@@ -36,7 +36,7 @@ function render() {
 }
 
 let loadMore = () => {
-  page += 10;
+  page += 5;
   fetchNews();
 };
 
