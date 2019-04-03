@@ -9,6 +9,35 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
+
+function writeUserData(userId, name, email, imageUrl) {
+    firebase.database().ref('users/' + userId).set({
+        username: name,
+        email: email,
+        profile_picture: imageUrl
+    });
+    function writeNewPost(uid, username, picture, title, body) {
+        // A post entry.
+        var postData = {
+            author: username,
+            uid: uid,
+            body: body,
+            title: title,
+            starCount: 0,
+            authorPic: picture
+        };
+
+        // Get a key for a new Post.
+        var newPostKey = firebase.database().ref().child('posts').push().key;
+
+        // Write the new post's data simultaneously in the posts list and the user's post list.
+        var updates = {};
+        updates['/posts/' + newPostKey] = postData;
+        updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+        return firebase.database().ref().update(updates);
+    }
+}
 // add database below//
 // 2. Button for adding items
 $("#add-item").on("click", function (event) {
@@ -29,7 +58,7 @@ $("#add-item").on("click", function (event) {
     };
 
     // Uploads item data to the database
-    database.ref().push(newItem);
+    database.ref('posts').push(newItem);
 
     // Logs everything to console
     console.log(newItem.itemName);
@@ -47,7 +76,7 @@ $("#add-item").on("click", function (event) {
 });
 
 // 3. Create Firebase event for adding item to the database and a row in the html when a user adds an entry
-database.ref().on("child_added", function (childSnapshot) {
+database.ref('posts').on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
 
     // Store everything into a variable.
@@ -55,8 +84,23 @@ database.ref().on("child_added", function (childSnapshot) {
     var itemDesc = childSnapshot.val().desc;
     var itemWebLink = childSnapshot.val().webLink;
     var itemImage = childSnapshot.val().image;
+    // <div class="card">
+    //     <div class="card-image waves-effect waves-block waves-light">
+    //         <img class="activator" src="./assets/images/gifts.jpg">
+    //     </div>
+    //     <div class="card-content">
+    //         <span class="card-title activator grey-text text-darken-4">Card Title<i
+    //                 class="material-icons right">more_vert</i></span>
+    //         <p><a href="#">This is a link</a></p>
+    //     </div>
+    //     <div class="card-reveal">
+    //         <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    //         <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    //     </div>
+    // </div>
 
     var newDiv = $("<div class='card'>");
+<<<<<<< HEAD
     var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
     var newImage = $("<img class='activator' src='./assets/images/toys.jpg'");
     var newCardContent = $("<div class='card-content'");
@@ -66,16 +110,27 @@ database.ref().on("child_added", function (childSnapshot) {
     var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'");
     
 });
+=======
+>>>>>>> 2f80f2dfaa8fbe361c033063fd98594a2993b3d9
 
-var database = firebase.database();
+    var newDivCard = $("<div class='card-image waves-effect waves-block waves-light'>");
+    var newImage = $("<img class='activator' src='" + itemImage + "'>");
 
+    var newCardContent = $("<div class='card-content'>");
+    var newTitle = $('<span class="card-title activator grey-text text-darken-4">' + itemName + '<i class="material-icons right">more_vert</i></span>');
+    var newPLink = $("<p><a href='" + itemWebLink + "'>");
+    newPLink.text('Website');
 
+    var newReveal = $("<div class='card-reveal'>");
+    var newCardTitle2 = $("<span class='card-title grey-text text-darken-4'>" + itemName + "<i class='material-icons right'>close</i></span>");
+    var newPTag = $("<p>")
+    newPTag.text(itemDesc);
 
-var ref = database.ref('pic-num');
+    newDiv.append(newDivCard, newCardContent, newPLink, newReveal);
+    newDivCard.append(newImage);
+    newCardContent.append(newTitle);
+    newReveal.append(newCardTitle2, newPTag);
+    $('#cards').append(newDiv);
 
-var data = {
-    name: "DTS",
-    score: 43
-}
+});
 
-ref.push(data);
