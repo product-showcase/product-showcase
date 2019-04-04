@@ -74,11 +74,6 @@ database.ref('posts').on("child_added", function (childSnapshot) {
     $('#cards').append(newDiv);
 
     deleteItem.on("click", function (event) {
-<<<<<<< HEAD
-        event.preventDefault();
-
-        database.ref('posts/' + itemName).remove();
-=======
         var deleteItem = {
             name: null,
             desc: null,
@@ -87,6 +82,5 @@ database.ref('posts').on("child_added", function (childSnapshot) {
         };
         
         database.ref('posts').set(deleteItem);
->>>>>>> d0e78954323e05530cbcba0d76a0a16928630e09
     })
 });
