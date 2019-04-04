@@ -3,7 +3,7 @@ let page = 5;
 
 async function fetchNews() {
   let url =
-      `https://newsapi.org/v2/everything?pageSize=${page}&q=Apple&from=2019-03-30&sortBy=popularity&apiKey=ef0baffbb28d4777842bb510f2dcc979`;
+    `https://newsapi.org/v2/everything?pageSize=${page}&q=Apple&from=2019-03-30&sortBy=popularity&apiKey=ef0baffbb28d4777842bb510f2dcc979`;
   let results = await fetch(url);
   let data = await results.json();
   news = data.articles;
@@ -13,7 +13,7 @@ async function fetchNews() {
 function render() {
   document.getElementById(
     "total-stories"
-  ).innerHTML = `<center>Number of stories currently: ${news.length}</center>`;
+  ).innerHTML = `<center>Number of product news (currently): ${news.length}</center>`;
   document.getElementById("news-stories").innerHTML = news.map(
     article => `
         <div class="news-story d-flex border rounded p-5 m-2">
@@ -21,12 +21,12 @@ function render() {
           <h2>${article.title}</h2>
           <p>${article.source.name}</p>
           <p>${moment(article.publishedAt)
-            .startOf("hour")
-            .fromNow()}</p>
+        .startOf("hour")
+        .fromNow()}</p>
           <p>${article.description}</p>
           <p class="link-read"><a href="${article.url}">Read More</a></p>
         </div>
-        <div class="news-imgage col-4">
+        <div class="news-image col-4">
           <img class='img-thumbnail'
             src="${article.urlToImage}"
           />
