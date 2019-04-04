@@ -1,13 +1,21 @@
+body {
+  /* font-family: 'Montserrat', sans-serif; */
+  text-align: center;
+  font-family: 'Source Code Pro', monospace;
+  color: #777777; 
+}
+
+
 .topnav {
   overflow: hidden;
   background-color: #c55656;
 }
-.Aboutus {
+.aboutus {
   font-family: serif;
   font-style: Times;
   font-size: 25px;
 }
-.Directory{
+.directory{
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   margin-bottom: 10px;
@@ -81,4 +89,95 @@
 .link{
   position: absolute;
   left: 20px;
+}
+
+.nav-wrapper {
+  text-align: left; 
+  margin-left: 20px; 
+  margin-right: 20px;  
+}
+
+nav {
+  background-color: #c55656;
+}
+
+
+
+
+/* Top Section: NavBar */
+.navbar {
+  padding: 0 0 0.5rem;
+}
+
+.navbar-brand {
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-left: 20px; 
+  margin-right: 20px; 
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: rgba(255,255,255,.5); 
+}
+
+.white-text {
+  text-align: left; 
+}
+
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+/* 
+#map {
+  margin-right: 20px; 
+  margin-left: 20px; 
+} */
+
+
+#map {
+  height: 100%;
+  margin-right: 20px; 
+  margin-left: 20px; 
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.title-header {
+  color: #ee6e73; 
+  font-weight: bold; 
+  font-size: 40px; 
+}
+
+
+.paragraph {
+  margin-left: 30px; 
+  margin-right: 30px; 
+}
+
+.form-control {
+  text-align: center; 
 }

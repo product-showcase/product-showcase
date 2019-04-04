@@ -2,97 +2,232 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Product Showcase News</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Product Showcase - News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/styles.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 </head>
 
 <body>
-    <section id="title" class="section-color">
-        <div class="container-fluid">
-            <!-- Nav Bar -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <!-- brand -->
-                <a class="navbar-brand" href="index.html"><img src="assets/images/money.svg"
-                        class="d-inline-block align-top logo" alt="Project Showcase"></a>
-                <h1>Product Showcase</h1>
-                <!-- responsive button for small viewports; allows collapsing of navbar content on the right-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#clickToggles"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- stuff that collapses when the button appears -->
-                <div class="collapse navbar-collapse" id="clickToggles">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="product.html">News</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Title -->
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="title-description">Product Showcase (PS) is a website where community members post
-                        interesting products.</h2>
-                </div>
-                <div class="col-lg-3 col-sm-6">
 
-                    <img class="product-image" src="assets/images/money.svg" alt="Product Showcase">
-                </div>
-                <div class="col-lg-3 col-sm-6">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark justify-content-between">
 
-                    <img class="product-image" src="assets/images/money.svg" alt="Product Showcase">
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Product Showcase</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
-    <br />
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Home
+              <!-- <span class="sr-only">(current)</span> -->
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">News</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
 
-    <h2>
+
+
+
+
+
+  <div class="row">
+    <div class="col-12">
+      <h2 class="title-header">
         <center>Product Showcase News</center>
-    </h2>
-    <h2 id="total-stories"></h2>
-    <br />
-    <div id="news-stories">
+      </h2>
+      <h2 id="total-stories"></h2>
+      <br />
+      <div id="news-stories">
+      </div>
     </div>
+  </div>
     <center><button id="load-more" class='btn btn-primary'>Load more...</button> </center>
     <br />
-    </div>
+  </div>
 
-    <!-- Moment JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
-    <!-- Bootstrap JavaScript CDN-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!-- JavaScript Script -->
-    <script src="assets/js/news.js"></script>
+
+
+
+
+
+  <!-- Footer -->
+  <!-- <footer class="page-footer font-small mdb-color pt-4"> -->
+
+    <!-- Footer Links -->
+    <!-- <div class="container text-center text-md-left"> -->
+
+      <!-- Footer links -->
+      <!-- <div class="row text-center text-md-left mt-3 pb-3"> -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Product Showcase</h6>
+          <p>Product Showcase is a website that lets users can post new products.</p>
+        </div> -->
+        <!-- Grid column -->
+
+        <!-- <hr class="w-100 clearfix d-md-none"> -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+          <p>
+            <a href="#!">Ask</a>
+          </p>
+          <p>
+            <a href="#!">Ship</a>
+          </p>
+          <p>
+            <a href="#!">Makers</a>
+          </p>
+          <p>
+            <a href="#!">Jobs</a>
+          </p>
+        </div> -->
+        <!-- Grid column -->
+
+        <!-- <hr class="w-100 clearfix d-md-none"> -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Get to Know Us</h6>
+          <p>
+            <a href="#!">Blog</a>
+          </p>
+          <p>
+            <a href="#!">Investor Relations</a>
+          </p>
+          <p>
+            <a href="#!">Press Center</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+        </div> -->
+
+        <!-- Grid column -->
+        <!-- <hr class="w-100 clearfix d-md-none"> -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+          <p>
+            <i class="fas fa-home mr-3"></i> Irvine, CA 92617, US</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@showcase.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> (949) 555-1234</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> (949) 234-5679</p>
+        </div> -->
+        <!-- Grid column -->
+
+      <!-- </div> -->
+      <!-- Footer links -->
+
+      <!-- <hr> -->
+
+      <!-- Grid row -->
+      <!-- <div class="row d-flex align-items-center"> -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-7 col-lg-8">-->
+
+          <!--Copyright-->
+          <!-- <p class="text-center text-md-left">&copy; 2019 Copyright:
+            <a href="https://github.com/product-showcase/productshowcase">
+              <strong> productshowcase.com</strong>
+            </a>
+          </p>
+
+        </div> -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <!-- <div class="col-md-5 col-lg-4 ml-lg-0"> -->
+
+          <!-- Social buttons -->
+          <!-- <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div> -->
+        <!-- Grid column -->
+
+      <!-- </div> -->
+      <!-- Grid row -->
+
+    <!-- </div> -->
+    <!-- Footer Links -->
+
+  <!-- </footer> -->
+  <!-- Footer -->
+
+
+
+
+
+
+  <!-- Moment JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+  <!-- Bootstrap JavaScript CDN-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- JavaScript Script -->
+  <script src="assets/js/news.js"></script>
 </body>
 
 </html>
