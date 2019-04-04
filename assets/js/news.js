@@ -16,7 +16,7 @@ function render() {
   ).innerHTML = `<center>Number of stories currently: ${news.length}</center>`;
   document.getElementById("news-stories").innerHTML = news.map(
     article => `
-        <div class="news-story d-flex border border-success rounded p-5 m-2">
+        <div class="news-story d-flex border rounded p-5 m-2">
         <div class="news-content col-8">
           <h2>${article.title}</h2>
           <p>${article.source.name}</p>
@@ -24,7 +24,7 @@ function render() {
             .startOf("hour")
             .fromNow()}</p>
           <p>${article.description}</p>
-          <p><a href="${article.url}">Read More</a></p>
+          <p class="link-read"><a href="${article.url}">Read More</a></p>
         </div>
         <div class="news-imgage col-4">
           <img class='img-thumbnail'

@@ -71,6 +71,17 @@ h2, p {
   right: 25%;
 }
 
+
+.page-footer, .page-footer a {
+  background-color: #45526e; 
+  color: white; 
+  text-decoration: none;
+}
+
+.read-link {
+  color: blue; 
+}
+
 /* Top Section: Response to smaller viewports */
 @media (max-width: 992px) {
   .product-image {
