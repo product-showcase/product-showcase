@@ -1,4 +1,3 @@
 # product-showcase
-
-# Link
 https://product-showcase.github.io/productshowcase/about.html
+Click Link to view the page ^^
